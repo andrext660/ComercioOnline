@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ComercioOnline.Dominio.Entidades
 {
-    class Usuario
+    class Usuario: Entidade
     {
 
 
@@ -16,5 +16,10 @@ namespace ComercioOnline.Dominio.Entidades
         public string SobreNome { get; set; }
 
         public ICollection<Pedido> Pedidos { get; set; }
+
+        public override void Validate()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

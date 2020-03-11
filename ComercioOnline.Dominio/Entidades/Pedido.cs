@@ -1,11 +1,12 @@
 ﻿using ComercioOnline.Dominio.Objeto_de_Valor;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ComercioOnline.Dominio.Entidades
 {
-   public class Pedido
+   public class Pedido :Entidade
     {
 
         public int Id { get; set; }
@@ -30,7 +31,25 @@ namespace ComercioOnline.Dominio.Entidades
 
         public FormaPagamento FormaPagamento { get; set; }
 
-
         public ICollection<ItemPedido> ItensPedido { get; set; }
+
+
+        public void LimparMensagensValidicao()
+        {
+            _mensagemValidacao.Clear();
+        }
+
+        public override void Validate()
+        {
+            LimparMensagensValidicao();
+
+            if (!ItensPedido.Any())
+                AdicionarCritica("Crítica - Pedido não pode ficar sem item de pedido");
+
+
+            if (string.IsNullOrEmpty(CEP))
+                AdicionarCritica("CEP deve estar preenchido");
+                
+        }
     }
 }
