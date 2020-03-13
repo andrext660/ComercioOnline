@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ComercioOnline.Dominio.Entidades
 {
-    class Usuario: Entidade
+   public class Usuario: Entidade
     {
 
 
@@ -19,7 +19,18 @@ namespace ComercioOnline.Dominio.Entidades
 
         public override void Validate()
         {
-            throw new NotImplementedException();
+           
+            if (string.IsNullOrEmpty(Senha))
+            {
+                AdicionarCritica("O campo de senha não pode ser vazio");
+            }
+
+
+            if (string.IsNullOrEmpty(Email))
+            {
+                AdicionarCritica("O email não foi informado");
+            }
+
         }
     }
 }

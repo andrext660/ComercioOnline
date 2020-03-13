@@ -14,7 +14,17 @@ namespace ComercioOnline.Dominio.Entidades
 
         public override void Validate()
         {
-            throw new NotImplementedException();
+          if (Quantidade == 0)
+            {
+                AdicionarCritica("Quantidade não pode ser nula");
+
+            }
+
+          if(ProdutoId == 0)
+            {
+                AdicionarCritica("Não foi identificado qual a referência");
+            }
+
         }
     }
 }
