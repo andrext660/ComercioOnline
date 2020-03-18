@@ -1,0 +1,11 @@
+{
+
+  "ConnectionStrings": {
+
+    "SqlServerConnection": "", 
+    "ComercioOnlineDB": "Server=localhost;Database=ComercioOnlineDB;Uid=root;Pwd=123456"
+  }
+
+
+
+}
