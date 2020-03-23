@@ -24,12 +24,22 @@ namespace ComercioOnline.Repositorio.Config
                 .HasMaxLength(30)
                 .HasColumnType("varchar2");
 
+
+            builder.Property(u => u.SobreNome)
+               .IsRequired()
+               .HasMaxLength(15)
+               .HasColumnType("varchar2");
+
             builder
                 .Property(u => u.Senha)
                 .IsRequired()
                 .HasMaxLength(10);
 
-            throw new NotImplementedException();
+
+
+            builder
+                .HasMany(u => u.Pedidos)
+                .WithOne(p => p.Usuario);
         }
     }
 }

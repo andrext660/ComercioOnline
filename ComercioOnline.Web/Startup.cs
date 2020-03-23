@@ -36,7 +36,8 @@ namespace ComercioOnline.Web
             var connectionString = Configuration.GetConnectionString("ComercioOnlineDB");
 
             services.AddDbContext<Context>(option =>
-                                    option.UseMySql(connectionString,
+                                    option.UseLazyLoadingProxies()
+                                    .UseMySql(connectionString,
                                     m => m.MigrationsAssembly("ComercioOnline.Repositorio")));
 
            

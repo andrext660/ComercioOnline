@@ -8,13 +8,19 @@ namespace ComercioOnline.Dominio.Entidades
     public abstract class Entidade
     {
 
-        public List <string> _mensagemValidacao { get; set; }
+        private List <string> _mensagemValidacao { get; set; }
 
         private List <string> mensagemValidacao
         {
              get { return _mensagemValidacao ?? (_mensagemValidacao = new List<string>()); }
         }
 
+
+
+        public void LimparMensagensValidicao()
+        {
+            _mensagemValidacao.Clear();
+        }
 
         public abstract void Validate();
 

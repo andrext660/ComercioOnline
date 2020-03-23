@@ -15,7 +15,11 @@ namespace ComercioOnline.Dominio.Entidades
 
         public string SobreNome { get; set; }
 
-        public ICollection<Pedido> Pedidos { get; set; }
+
+        //Usuario pode ter nenhum ou vários pedidos
+        public virtual ICollection<Pedido> Pedidos { get; set; }
+
+
 
         public override void Validate()
         {

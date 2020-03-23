@@ -11,7 +11,15 @@ namespace ComercioOnline.Repositorio.Config
     {
         public void Configure(EntityTypeBuilder<FormaPagamento> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(f => f.Id);
+
+            builder.Property(f => f.Nome)
+                .IsRequired()
+                .HasMaxLength(15);
+
+            builder.Property(f => f.Descricao)
+                .IsRequired()
+                .HasMaxLength(50);
         }
     }
 }
