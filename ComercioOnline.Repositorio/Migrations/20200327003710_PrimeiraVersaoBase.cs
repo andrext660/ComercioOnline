@@ -1,4 +1,4 @@
-﻿using System;
+﻿  using System;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
@@ -45,8 +45,8 @@ namespace ComercioOnline.Repositorio.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Email = table.Column<string>(maxLength: 50, nullable: false),
                     Senha = table.Column<string>(maxLength: 10, nullable: false),
-                    Nome = table.Column<string>(type: "varchar2", maxLength: 30, nullable: false),
-                    SobreNome = table.Column<string>(type: "varchar2", maxLength: 15, nullable: false)
+                    Nome = table.Column<string>(maxLength: 30, nullable: false),
+                    SobreNome = table.Column<string>(maxLength: 15, nullable: false)
                 },
                 constraints: table =>
                 {

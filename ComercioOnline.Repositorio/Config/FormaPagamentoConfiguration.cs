@@ -15,7 +15,7 @@ namespace ComercioOnline.Repositorio.Config
 
             builder.Property(f => f.Nome)
                 .IsRequired()
-                .HasMaxLength(15);
+                .HasMaxLength(50);
 
             builder.Property(f => f.Descricao)
                 .IsRequired()

@@ -3,7 +3,7 @@
   "ConnectionStrings": {
 
     "SqlServerConnection": "", 
-    "ComercioOnlineDB": "Server=localhost;Database=ComercioOnlineDB;Uid=root;Pwd=123456"
+    "ComercioOnlineDB": "Server=localhost;database=ComercioOnlineDB;Uid=root;pwd=123456"
   }
 
 

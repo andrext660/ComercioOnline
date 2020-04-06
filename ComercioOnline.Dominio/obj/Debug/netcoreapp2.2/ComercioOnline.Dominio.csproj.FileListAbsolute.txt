@@ -6,4 +6,3 @@ C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netc
 C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netcoreapp2.2\ComercioOnline.Dominio.AssemblyInfo.cs
 C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netcoreapp2.2\ComercioOnline.Dominio.dll
 C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netcoreapp2.2\ComercioOnline.Dominio.pdb
-C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netcoreapp2.2\ComercioOnline.Dominio.csprojAssemblyReference.cache

@@ -3,14 +3,16 @@ using System;
 using ComercioOnline.Repositorio.Contexto;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ComercioOnline.Repositorio.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20200327003710_PrimeiraVersaoBase")]
+    partial class PrimeiraVersaoBase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -132,31 +134,11 @@ namespace ComercioOnline.Repositorio.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasMaxLength(50);
+                        .HasMaxLength(15);
 
                     b.HasKey("Id");
 
                     b.ToTable("FormaPagamentos");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Descricao = "Forma de Pagamento Boleto",
-                            Nome = "Boleto"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Descricao = "Forma de Pagamento Cartão",
-                            Nome = "Cartão de Crédito"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Descricao = "Forma de Pagamento Depósito",
-                            Nome = "Deposito"
-                        });
                 });
 
             modelBuilder.Entity("ComercioOnline.Dominio.Entidades.ItemPedido", b =>

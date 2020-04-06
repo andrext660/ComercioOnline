@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ComercioOnline.Repositorio.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20200322040205_PrimeiraVersaoBase")]
-    partial class PrimeiraVersaoBase
+    [Migration("20200331025018_CargaFormaPagamento")]
+    partial class CargaFormaPagamento
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -108,7 +108,6 @@ namespace ComercioOnline.Repositorio.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("varchar2")
                         .HasMaxLength(30);
 
                     b.Property<string>("Senha")
@@ -117,7 +116,6 @@ namespace ComercioOnline.Repositorio.Migrations
 
                     b.Property<string>("SobreNome")
                         .IsRequired()
-                        .HasColumnType("varchar2")
                         .HasMaxLength(15);
 
                     b.HasKey("Id");
@@ -136,11 +134,31 @@ namespace ComercioOnline.Repositorio.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasMaxLength(15);
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
                     b.ToTable("FormaPagamentos");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Descricao = "Forma de Pagamento Boleto",
+                            Nome = "Boleto"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Descricao = "Forma de Pagamento Cartão",
+                            Nome = "Cartão de Crédito"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Descricao = "Forma de Pagamento Depósito",
+                            Nome = "Deposito"
+                        });
                 });
 
             modelBuilder.Entity("ComercioOnline.Dominio.Entidades.ItemPedido", b =>

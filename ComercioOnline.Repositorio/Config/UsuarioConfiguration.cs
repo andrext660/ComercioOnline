@@ -21,14 +21,12 @@ namespace ComercioOnline.Repositorio.Config
 
             builder.Property(u => u.Nome)
                 .IsRequired()
-                .HasMaxLength(30)
-                .HasColumnType("varchar2");
+                .HasMaxLength(30);
 
 
             builder.Property(u => u.SobreNome)
                .IsRequired()
-               .HasMaxLength(15)
-               .HasColumnType("varchar2");
+               .HasMaxLength(15) ;
 
             builder
                 .Property(u => u.Senha)
