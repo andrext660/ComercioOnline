@@ -38,32 +38,41 @@ namespace ComercioOnline.Repositorio.Contexto
             modelBuilder.ApplyConfiguration(new FormaPagamentoConfiguration());
             modelBuilder.ApplyConfiguration(new ItemPedidoConfiguration());
 
-
+            //Forma de Pagamento
 
             modelBuilder.Entity<FormaPagamento>().HasData(
-            new FormaPagamento()
+              new FormaPagamento()
               {
-                    Id = 1,
-                    Nome = "Boleto",
-                    Descricao = "Forma de Pagamento Boleto"
+                  Id = 1,
+                  Nome = "Boleto",
+                  Descricao = "Forma de Pagamento Boleto"
               },
 
-            new FormaPagamento()
-            {
-                Id = 2,
-                Nome = "Cartão de Crédito",
-                Descricao = "Forma de Pagamento Cartão"
-            },
+              new FormaPagamento()
+              {
+                  Id = 2,
+                  Nome = "Cartão de Crédito",
+                  Descricao = "Forma de Pagamento Cartão"
+              },
 
-            new FormaPagamento()
+              new FormaPagamento()
+              {
+                  Id = 3,
+                  Nome = "Deposito",
+                  Descricao = "Forma de Pagamento Depósito"
+              });
+
+            //Produtos
+
+            modelBuilder.Entity<Produto>().HasData(
+            new Produto()
             {
-                Id = 3,
-                Nome = "Deposito",
-                Descricao = "Forma de Pagamento Depósito"
+                Id = 1,
+                Nome = "Calabresa",
+                Descricao = "Calabresa Defumada",
+                Preco = 12
             }
-
-
-            );
+              );
 
             base.OnModelCreating(modelBuilder);
         }

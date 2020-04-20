@@ -1,4 +1,6 @@
+using ComercioOnline.Dominio.Contratos;
 using ComercioOnline.Repositorio.Contexto;
+using ComercioOnline.Repositorio.Repositorios;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -33,6 +35,8 @@ namespace ComercioOnline.Web
         public void ConfigureServices(IServiceCollection services)
 
         {
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             var connectionString = Configuration.GetConnectionString("ComercioOnlineDB");
 
             services.AddDbContext<Context>(option =>
@@ -40,9 +44,10 @@ namespace ComercioOnline.Web
                                     .UseMySql(connectionString,
                                     m => m.MigrationsAssembly("ComercioOnline.Repositorio")));
 
-           
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
+           
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

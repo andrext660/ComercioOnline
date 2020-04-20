@@ -11,6 +11,8 @@ namespace ComercioOnline.Repositorio.Repositorios
     {
         public ProdutoRepositorio(Context context) : base(context)
         {
+
+
         }
     }
 }
