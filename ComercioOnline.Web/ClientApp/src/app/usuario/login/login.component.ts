@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Usuario } from '../../modelo/usuario';
 
 
 
@@ -9,6 +10,26 @@ import { Component } from '@angular/core';
 
 })
 export class LoginComponent {
+
+  public usuario;
+  
+
+
+
+  constructor() {
+    this.usuario = new Usuario();
+  }
+  
+  entrar() {
+
+    
+
+
+
+  }
+
+
+ 
 
 
 }

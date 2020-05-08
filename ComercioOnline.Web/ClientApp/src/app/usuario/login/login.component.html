@@ -1,10 +1,72 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+<div class="text-center">
+  <form class="form-signin">
 
-</body>
-</html>
+    <h1 class="h4 mb-2 login"> Login do Cliente</h1>
+
+    <label for="inputEmail" class="sr-only">Email</label>
+    <input type="email" id="inputEmail"
+           name="email" placeholder="Informe o seu Email"
+           class="form-control mb-2"
+           [(ngModel)]="usuario.email"
+           #email="ngModel"
+           [ngClass] = "{
+
+           'is-valid':email.valid && (email.dirty || email.touched),
+           'is-invalid':email.invalid && (email.dirty || email.touched)
+           }" 
+           required
+           email/>
+
+    <div class="invalid-feedback mb-2" *ngIf="email.invalid && (email.dirty || email.touched)">
+      <div *ngIf="email.errors.required">
+        Email deve ser preenchido
+      </div>
+
+      <div *ngIf="email.errors.email">
+        Email não está no formato correto
+      </div>
+    </div>
+
+    <label for="inputSenha" class="sr-only">Senha</label>
+    <input type="password" id="inputSenha"
+           name="senha" placeholder="Informe a senha"
+           class="form-control mb-2"
+           [(ngModel)]="usuario.senha"
+           #senha="ngModel"
+           [ngClass] = "{
+
+           'is-valid':senha.valid && (senha.dirty || senha.touched),
+           'is-invalid':senha.invalid && (senha.dirty || senha.touched)
+           }" 
+           required/>
+
+    <div class="invalid-feedback mb-2" *ngIf="senha.invalid && (senha.dirty || senha.touched)">
+        <div *ngIf="senha.errors.required">
+        Senha deve ser preenchida
+        </div>
+    </div>
+
+
+      <button class="btn btn-primary btn-block" type="submit" (click)="entrar()"> Entrar</button>
+
+      <img src="../../../assets/img/comercio-logo.png" />
+
+
+      <!--             Diretivas
+
+              <div class="alert alert-primary" role="alert" *ngIf="usuarioAutenticado">
+               Usuario Autenticado!
+              </div>
+
+            <div class="alert alert-warning" role="alert" >
+            <div *ngFor="let us of usuarios">
+
+            {{us}}
+            </div>
+
+    </div>
+            -->
+
+
+  </form>
+</div>
