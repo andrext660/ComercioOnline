@@ -3,11 +3,12 @@ using ComercioOnline.Dominio.Entidades;
 using ComercioOnline.Repositorio.Contexto;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ComercioOnline.Repositorio.Repositorios
 {
-    class UsuarioRepositorio : BaseRepositorio<Usuario>, IUsuarioRepositorio
+    public class UsuarioRepositorio : BaseRepositorio<Usuario>, IUsuarioRepositorio
 
     {
        
@@ -17,6 +18,9 @@ namespace ComercioOnline.Repositorio.Repositorios
 
         }
 
-
+        public Usuario Obter(string email, string senha)
+        {
+            return Context.Usuarios.FirstOrDefault(u=> u.Email == email && u.Senha == senha);
+        }
     }
 }
