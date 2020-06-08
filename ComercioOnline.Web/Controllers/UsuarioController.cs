@@ -58,9 +58,6 @@ namespace ComercioOnline.Web.Controllers
             {
 
                 var usuarioRetorno = _usuarioRepositorio.Obter(usuario.Email,usuario.Senha);
-
-
-
                 if(usuarioRetorno != null)
                 return Ok(usuarioRetorno);
 
