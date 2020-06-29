@@ -49,30 +49,13 @@
 
     <!-- Botão de submissão-->
       <button class="btn btn-primary btn-block" type="submit" (click)="entrar()"[disabled]="ativar_spinner">
-
       <span class=" spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="ativar_spinner" ></span>
        Entrar
       </button>
       <div class="alert alert-danger" *ngIf="mensagem">
         {{mensagem}}
       </div>
-
-
       <img src="../../../assets/img/comercio-logo.png" />
-
-
-        <!-- Diretivas
-              <div class="alert alert-primary" role="alert" *ngIf="usuarioAutenticado">
-               Usuario Autenticado!
-              </div>
-            <div class="alert alert-warning" role="alert" >
-            <div *ngFor="let us of usuarios">
-
-            {{us}}
-            </div>
-            </div>
-             -->
-
 
   </form>
 </div>

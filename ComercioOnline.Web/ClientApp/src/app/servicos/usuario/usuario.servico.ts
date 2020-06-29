@@ -8,6 +8,7 @@ import { Usuario } from "../../modelo/usuario";
 @Injectable({
   providedIn: "root"
 })
+
 export class UsuarioServico {
 
 
@@ -44,7 +45,8 @@ export class UsuarioServico {
 
   }
 
-        public verificarUsuario(usuario: Usuario): Observable<Usuario> {
+  public verificarUsuario(usuario: Usuario): Observable<Usuario> {
+
            const headers = new HttpHeaders().set('content-type', 'application/json');
             var body={
             email: usuario.email,
@@ -53,5 +55,19 @@ export class UsuarioServico {
           return this.http.post<Usuario>(this.baseURL + "api/usuario/verificarUsuario", body, { headers });
         }
 
+
+  public cadastrarUsuario(usuario: Usuario): Observable<Usuario> {
+
+    const headers = new HttpHeaders().set('content-type', 'application/json');
+
+    var body = {
+      email: usuario.email,
+      senha: usuario.senha,
+      nome: usuario.nome,
+      sobreNome: usuario.sobreNome
+    }
+
+    this.http.post<Usuario>(this.baseURL + "api/usuario", body, { headers });
+  }
  
 }
