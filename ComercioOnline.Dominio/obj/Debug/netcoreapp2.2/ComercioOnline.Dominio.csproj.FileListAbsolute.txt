@@ -1,8 +1,9 @@
 C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Dominio\bin\Debug\netcoreapp2.2\ComercioOnline.Dominio.deps.json
 C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Dominio\bin\Debug\netcoreapp2.2\ComercioOnline.Dominio.dll
 C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Dominio\bin\Debug\netcoreapp2.2\ComercioOnline.Dominio.pdb
-C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netcoreapp2.2\ComercioOnline.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netcoreapp2.2\ComercioOnline.Dominio.csprojAssemblyReference.cache
 C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netcoreapp2.2\ComercioOnline.Dominio.AssemblyInfoInputs.cache
 C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netcoreapp2.2\ComercioOnline.Dominio.AssemblyInfo.cs
+C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netcoreapp2.2\ComercioOnline.Dominio.csproj.CoreCompileInputs.cache
 C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netcoreapp2.2\ComercioOnline.Dominio.dll
 C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netcoreapp2.2\ComercioOnline.Dominio.pdb

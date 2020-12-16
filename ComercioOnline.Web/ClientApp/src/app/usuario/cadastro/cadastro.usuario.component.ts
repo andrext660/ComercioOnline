@@ -24,11 +24,13 @@ export class CadastroUsuarioComponent implements OnInit{
   }
 
   public cadastrar() {
-    this.usuarioServico.cadastrarUsuario(this.usuario).
-      subscribe(
-        usuarioJson => { },
-        e => {}
-        );
+
+    alert("Nome: " + this.usuario.nome + " Email: " + this.usuario.email + " Sobre Nome: " + this.usuario.sobreNome + " Senha: " + this.usuario.senha);
+    //this.usuarioServico.cadastrarUsuario(this.usuario).
+    //  subscribe(
+    //    usuarioJson => { },
+    //    e => {}
+    //    );
   }
 
 }

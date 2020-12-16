@@ -30,8 +30,6 @@ namespace ComercioOnline.Repositorio.Contexto
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
-
             modelBuilder.ApplyConfiguration(new UsuarioConfiguration());
             modelBuilder.ApplyConfiguration(new PedidoConfiguration());
             modelBuilder.ApplyConfiguration(new ProdutoConfiguration());

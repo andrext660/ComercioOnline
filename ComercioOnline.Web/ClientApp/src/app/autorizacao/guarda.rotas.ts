@@ -12,13 +12,11 @@ import { UsuarioServico } from "../servicos/usuario/usuario.servico";
 
 export class GuardaRotas implements CanActivate {
 
-
-
-  constructor(private router: Router, private usuarioServico: UsuarioServico) {
+      constructor(private router: Router, private usuarioServico: UsuarioServico) {
 
   }
 
-    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+      canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
      
 
       if (this.usuarioServico.usuario_autenticado()) {

@@ -17,57 +17,51 @@ export class UsuarioServico {
 
 
   set usuario(usuario: Usuario) {
-    sessionStorage.setItem("usuario-autenticado", JSON.stringify(usuario));
-    this._usuario = usuario;
+        sessionStorage.setItem("usuario-autenticado", JSON.stringify(usuario));
+          this._usuario = usuario;
   }
 
   get usuario(): Usuario {
-    let usuario_json = sessionStorage.getItem("usuario-autenticado");
-    this._usuario = JSON.parse(usuario_json);
-    return this._usuario;
+        let usuario_json = sessionStorage.getItem("usuario-autenticado");
+          this._usuario = JSON.parse(usuario_json);
+            return this._usuario;
   }
 
 
-  public usuario_autenticado(): boolean {
-    return this._usuario != null && this._usuario.email != "" && this._usuario.senha != "";
+       public usuario_autenticado(): boolean {
+                return this._usuario != null && this._usuario.email != "" && this._usuario.senha != "";
   }
 
-  public limpar_sessao() {
-    sessionStorage.setItem("usuario-autenticado", "");
-    this._usuario = null;
+       public limpar_sessao() {
+              sessionStorage.setItem("usuario-autenticado", "");
+                this._usuario = null;
   }
 
-
-
-
-  constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    this.baseURL = baseUrl;
+      constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+              this.baseURL = baseUrl;
 
   }
 
-  public verificarUsuario(usuario: Usuario): Observable<Usuario> {
-
-           const headers = new HttpHeaders().set('content-type', 'application/json');
-            var body={
-            email: usuario.email,
-            senha: usuario.senha
-          }
-          return this.http.post<Usuario>(this.baseURL + "api/usuario/verificarUsuario", body, { headers });
+      public verificarUsuario(usuario: Usuario): Observable<Usuario> {
+              const headers = new HttpHeaders().set('content-type', 'application/json');
+                var body={
+                  email: usuario.email,
+                  senha: usuario.senha
+                } 
+                    return this.http.post<Usuario>(this.baseURL + "api/usuario/verificarUsuario", body, { headers });
         }
 
+      public cadastrarUsuario(usuario: Usuario): Observable<Usuario> {
+           const headers = new HttpHeaders().set('content-type', 'application/json');
+              var body = {
+               email: usuario.email,
+               senha: usuario.senha,
+               nome: usuario.nome,
+               sobreNome: usuario.sobreNome
+         }
 
-  public cadastrarUsuario(usuario: Usuario): Observable<Usuario> {
-
-    const headers = new HttpHeaders().set('content-type', 'application/json');
-
-    var body = {
-      email: usuario.email,
-      senha: usuario.senha,
-      nome: usuario.nome,
-      sobreNome: usuario.sobreNome
-    }
-
-    this.http.post<Usuario>(this.baseURL + "api/usuario", body, { headers });
+                return this.http.post<Usuario>(this.baseURL + "api/usuario", body, { headers });
   }
- 
+
+
 }
