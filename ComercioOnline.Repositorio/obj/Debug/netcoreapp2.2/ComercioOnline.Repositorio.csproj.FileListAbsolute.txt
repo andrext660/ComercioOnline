@@ -10,3 +10,15 @@ C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\
 C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp2.2\ComercioOnline.Repositorio.csproj.CopyComplete
 C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp2.2\ComercioOnline.Repositorio.dll
 C:\Users\Teste\source\repos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp2.2\ComercioOnline.Repositorio.pdb
+C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\bin\Debug\netcoreapp2.2\ComercioOnline.Repositorio.deps.json
+C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\bin\Debug\netcoreapp2.2\ComercioOnline.Repositorio.dll
+C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\bin\Debug\netcoreapp2.2\ComercioOnline.Repositorio.pdb
+C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\bin\Debug\netcoreapp2.2\ComercioOnline.Dominio.dll
+C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\bin\Debug\netcoreapp2.2\ComercioOnline.Dominio.pdb
+C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp2.2\ComercioOnline.Repositorio.csprojAssemblyReference.cache
+C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp2.2\ComercioOnline.Repositorio.AssemblyInfoInputs.cache
+C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp2.2\ComercioOnline.Repositorio.AssemblyInfo.cs
+C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp2.2\ComercioOnline.Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp2.2\ComercioOnline.Repositorio.csproj.CopyComplete
+C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp2.2\ComercioOnline.Repositorio.dll
+C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp2.2\ComercioOnline.Repositorio.pdb

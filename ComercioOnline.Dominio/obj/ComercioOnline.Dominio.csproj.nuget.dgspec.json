@@ -1,34 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Teste\\source\\repos\\ComercioOnline\\ComercioOnline.Dominio\\ComercioOnline.Dominio.csproj": {}
+    "C:\\Users\\Andre\\source\\repos\\ComercioOnline\\ComercioOnline.Dominio\\ComercioOnline.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Teste\\source\\repos\\ComercioOnline\\ComercioOnline.Dominio\\ComercioOnline.Dominio.csproj": {
+    "C:\\Users\\Andre\\source\\repos\\ComercioOnline\\ComercioOnline.Dominio\\ComercioOnline.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Teste\\source\\repos\\ComercioOnline\\ComercioOnline.Dominio\\ComercioOnline.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\Andre\\source\\repos\\ComercioOnline\\ComercioOnline.Dominio\\ComercioOnline.Dominio.csproj",
         "projectName": "ComercioOnline.Dominio",
-        "projectPath": "C:\\Users\\Teste\\source\\repos\\ComercioOnline\\ComercioOnline.Dominio\\ComercioOnline.Dominio.csproj",
-        "packagesPath": "C:\\Users\\Teste\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Teste\\source\\repos\\ComercioOnline\\ComercioOnline.Dominio\\obj\\",
+        "projectPath": "C:\\Users\\Andre\\source\\repos\\ComercioOnline\\ComercioOnline.Dominio\\ComercioOnline.Dominio.csproj",
+        "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Andre\\source\\repos\\ComercioOnline\\ComercioOnline.Dominio\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Teste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.2"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.2": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -39,15 +37,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.2": {
-          "dependencies": {
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
-            }
-          },
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -58,7 +49,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

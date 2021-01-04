@@ -15,6 +15,8 @@ namespace ComercioOnline.Web.Controllers
 
         private readonly IProdutoRepositorio _produtoRepositorio;
 
+
+
         public ProdutoController(IProdutoRepositorio produtoRepositorio)
         {
             _produtoRepositorio = produtoRepositorio;
