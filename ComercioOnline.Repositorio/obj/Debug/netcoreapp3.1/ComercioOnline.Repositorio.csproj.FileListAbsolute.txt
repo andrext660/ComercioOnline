@@ -1,4 +1,6 @@
 C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\bin\Debug\netcoreapp3.1\ComercioOnline.Repositorio.deps.json
+C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\bin\Debug\netcoreapp3.1\ComercioOnline.Repositorio.runtimeconfig.json
+C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\bin\Debug\netcoreapp3.1\ComercioOnline.Repositorio.runtimeconfig.dev.json
 C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\bin\Debug\netcoreapp3.1\ComercioOnline.Repositorio.dll
 C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\bin\Debug\netcoreapp3.1\ComercioOnline.Repositorio.pdb
 C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\bin\Debug\netcoreapp3.1\ComercioOnline.Dominio.dll
@@ -10,3 +12,4 @@ C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\
 C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp3.1\ComercioOnline.Repositorio.csproj.CopyComplete
 C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp3.1\ComercioOnline.Repositorio.dll
 C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp3.1\ComercioOnline.Repositorio.pdb
+C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Repositorio\obj\Debug\netcoreapp3.1\ComercioOnline.Repositorio.genruntimeconfig.cache

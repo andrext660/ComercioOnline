@@ -1,10 +1,10 @@
-﻿  using System;
+﻿using System;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ComercioOnline.Repositorio.Migrations
 {
-    public partial class PrimeiraVersaoBase : Migration
+    public partial class SegundaVersaoBase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,7 +14,7 @@ namespace ComercioOnline.Repositorio.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Nome = table.Column<string>(maxLength: 15, nullable: false),
+                    Nome = table.Column<string>(maxLength: 50, nullable: false),
                     Descricao = table.Column<string>(maxLength: 50, nullable: false)
                 },
                 constraints: table =>
@@ -106,6 +106,21 @@ namespace ComercioOnline.Repositorio.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.InsertData(
+                table: "FormaPagamentos",
+                columns: new[] { "Id", "Descricao", "Nome" },
+                values: new object[,]
+                {
+                    { 1, "Forma de Pagamento Boleto", "Boleto" },
+                    { 2, "Forma de Pagamento Cartão", "Cartão de Crédito" },
+                    { 3, "Forma de Pagamento Depósito", "Deposito" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Produtos",
+                columns: new[] { "Id", "Descricao", "Nome", "Preco" },
+                values: new object[] { 1, "Calabresa Defumada", "Calabresa", 12m });
 
             migrationBuilder.CreateIndex(
                 name: "IX_ItensPedidos_PedidoId",
