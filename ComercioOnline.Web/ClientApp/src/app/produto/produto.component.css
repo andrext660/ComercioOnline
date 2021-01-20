@@ -1,2 +1,12 @@
-﻿body {
+.titulo {
+    color:red;
+}
+
+.custom-file-input:lang(en) ~ .custom-file-label::after {
+  content: "Selecionar";
+}
+
+
+.invalid-feedback {
+    display:block;
 }

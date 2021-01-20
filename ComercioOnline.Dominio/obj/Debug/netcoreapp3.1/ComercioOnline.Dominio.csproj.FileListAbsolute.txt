@@ -9,3 +9,4 @@ C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netc
 C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netcoreapp3.1\ComercioOnline.Dominio.dll
 C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netcoreapp3.1\ComercioOnline.Dominio.pdb
 C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netcoreapp3.1\ComercioOnline.Dominio.genruntimeconfig.cache
+C:\Users\Andre\source\repos\ComercioOnline\ComercioOnline.Dominio\obj\Debug\netcoreapp3.1\ComercioOnline.Dominio.csprojAssemblyReference.cache
