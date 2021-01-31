@@ -22,5 +22,10 @@ namespace ComercioOnline.Repositorio.Repositorios
         {
             return Context.Usuarios.FirstOrDefault(u=> u.Email == email && u.Senha == senha);
         }
+
+        public Usuario Obter(string email)
+        {
+            return Context.Usuarios.FirstOrDefault(u => u.Email == email);
+        }
     }
 }

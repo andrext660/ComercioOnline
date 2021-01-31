@@ -36,12 +36,15 @@ namespace ComercioOnline.Web.Controllers
 
 
         [HttpPost]
-        public ActionResult Post()
+        public ActionResult Post([FromBody] Usuario usuario)
         {
             try
             {
-                return Ok();
-
+                var usuarioCadastrado = _usuarioRepositorio.Obter(usuario.Email);
+                   if (usuarioCadastrado != null)
+                    return BadRequest("Usuario já Cadastrado");
+                      _usuarioRepositorio.Adicionar(usuario);
+                        return Ok();
             }
             catch (Exception ex)
 
@@ -56,7 +59,6 @@ namespace ComercioOnline.Web.Controllers
         {
             try
             {
-
                 var usuarioRetorno = _usuarioRepositorio.Obter(usuario.Email,usuario.Senha);
                 if(usuarioRetorno != null)
                 return Ok(usuarioRetorno);

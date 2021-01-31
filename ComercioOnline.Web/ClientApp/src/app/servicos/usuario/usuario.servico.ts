@@ -15,6 +15,9 @@ export class UsuarioServico {
   private baseURL: string;
   private _usuario: Usuario;
 
+      get headers(): HttpHeaders {
+        return new HttpHeaders().set('content-type', 'application/json')
+  }
 
   set usuario(usuario: Usuario) {
         sessionStorage.setItem("usuario-autenticado", JSON.stringify(usuario));
@@ -37,12 +40,12 @@ export class UsuarioServico {
                 this._usuario = null;
   }
 
-      constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+       constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
               this.baseURL = baseUrl;
 
   }
 
-      public verificarUsuario(usuario: Usuario): Observable<Usuario> {
+       public verificarUsuario(usuario: Usuario): Observable<Usuario> {
               const headers = new HttpHeaders().set('content-type', 'application/json');
                 var body={
                   email: usuario.email,
@@ -51,17 +54,15 @@ export class UsuarioServico {
                     return this.http.post<Usuario>(this.baseURL + "api/usuario/verificarUsuario", body, { headers });
         }
 
-      public cadastrarUsuario(usuario: Usuario): Observable<Usuario> {
-           const headers = new HttpHeaders().set('content-type', 'application/json');
-              var body = {
-               email: usuario.email,
-               senha: usuario.senha,
-               nome: usuario.nome,
-               sobreNome: usuario.sobreNome
+       public cadastrarUsuario(usuario: Usuario): Observable<Usuario> {
+
+         return this.http.post<Usuario>(this.baseURL + "api/usuario", JSON.stringify(usuario),{ headers:this.headers });
+
+
          }
 
-                return this.http.post<Usuario>(this.baseURL + "api/usuario", body, { headers });
+              
   }
 
 
-}
+

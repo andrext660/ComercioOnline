@@ -3,6 +3,7 @@ using ComercioOnline.Repositorio.Contexto;
 using ComercioOnline.Repositorio.Repositorios;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -35,8 +36,9 @@ namespace ComercioOnline.Web
         {
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-            var connectionString = Configuration.GetConnectionString("ComercioOnlineDB");
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
+            var connectionString = Configuration.GetConnectionString("ComercioOnlineDB");
             services.AddDbContext<Context>(option =>
                                     option.UseLazyLoadingProxies()
                                     .UseMySql(connectionString,
