@@ -19,7 +19,7 @@ namespace ComercioOnline.Repositorio.Config
                 .HasMaxLength(50);
 
             builder
-                .Property(p => p.Preco)
+                .Property(p => p.Preco).HasColumnType("decimal(19,4)")
                 .IsRequired();
 
             builder

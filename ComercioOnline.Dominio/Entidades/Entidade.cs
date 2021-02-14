@@ -24,7 +24,7 @@ namespace ComercioOnline.Dominio.Entidades
 
         public abstract void Validate();
 
-        protected bool Ehvalido
+        public bool Ehvalido
         {
             get { return !mensagemValidacao.Any(); }
         }
@@ -33,5 +33,12 @@ namespace ComercioOnline.Dominio.Entidades
         {
             mensagemValidacao.Add(mensagem);
         }
+
+        public string ObterMensagemValidacao()
+        {
+            return string.Join(". ", mensagemValidacao);
+
+        }
+        
     }
 }

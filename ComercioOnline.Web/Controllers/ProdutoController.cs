@@ -50,11 +50,16 @@ namespace ComercioOnline.Web.Controllers
         [HttpPost]
         public IActionResult Post([FromBody]Produto produto )
         {
+            try
+            {
 
-            try {
+                produto.Validate();
+                if (!produto.Ehvalido)
+                {
+                    return BadRequest(produto.ObterMensagemValidacao());
+                }
 
                 _produtoRepositorio.Adicionar(produto);
-
                 return Created("api/produto", produto);
             }
 
@@ -82,7 +87,7 @@ namespace ComercioOnline.Web.Controllers
                     formFile.CopyTo(StreamArquivo);
                 }
 
-                return Ok("Arquivo Enviado com Sucesso");
+                return Json(nomeArquivo);
 
 
             }
