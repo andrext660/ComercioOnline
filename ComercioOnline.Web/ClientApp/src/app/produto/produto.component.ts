@@ -1,4 +1,5 @@
 import {Component, OnInit} from "@angular/core"
+import { Router } from "@angular/router";
 import { from } from "rxjs";
 import { Produto } from "../modelo/produto";
 import { ProdutoServico } from "../servicos/produto/produto.servico";
@@ -39,7 +40,7 @@ export class ProdutoComponent implements OnInit{
     
 }
 
-  constructor(private produtoServico: ProdutoServico) {
+  constructor(private produtoServico: ProdutoServico, private router:Router) {
 
   }
 
@@ -51,6 +52,7 @@ export class ProdutoComponent implements OnInit{
         produtoJson => {
           console.log(produtoJson);
           this.desativarEspera();
+          this.router.navigate(['/pesquisar-produto']);
         },
         e => {
           console.log(e.error);
@@ -68,5 +70,6 @@ export class ProdutoComponent implements OnInit{
   public desativarEspera() {
     this.ativar_spinner = false;
   }
+
 
 }

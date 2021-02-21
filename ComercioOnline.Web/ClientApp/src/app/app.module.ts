@@ -35,7 +35,7 @@ import { PesquisaProdutoComponent } from './produto/pesquisa/pesquisa.produto.co
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'produto', component: ProdutoComponent},
       { path: 'entrar', component: LoginComponent },
-      { path: "novo-usuario", component: CadastroUsuarioComponent }
+      { path: "novo-usuario", component: CadastroUsuarioComponent },
       { path: "pesquisar-produto", component: PesquisaProdutoComponent }
     ])
   ],

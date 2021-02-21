@@ -36,11 +36,10 @@ namespace ComercioOnline.Web.Controllers
         {
             try
             {
-                return Ok(_produtoRepositorio.ObterTodos());
+                return Json(_produtoRepositorio.ObterTodos());
             }
             catch(Exception ex)
             {
-
                 return BadRequest(ex.ToString());
             }
         }
@@ -70,6 +69,21 @@ namespace ComercioOnline.Web.Controllers
 
         }
 
+        [HttpPost("Deletar")]
+        public IActionResult Deletar([FromBody] Produto produto) {
+            try
+            {
+                _produtoRepositorio.Remover(produto);
+                return Json(_produtoRepositorio.ObterTodos());
+            } 
+            catch(Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+            
+        }
+
+
         [HttpPost("EnviarArquivo")]
         public IActionResult EnviarArquivo()
         {
@@ -87,7 +101,7 @@ namespace ComercioOnline.Web.Controllers
                     formFile.CopyTo(StreamArquivo);
                 }
 
-                return Json(nomeArquivo);
+                return Json(novoNomeArquivo);
 
 
             }
@@ -103,7 +117,7 @@ namespace ComercioOnline.Web.Controllers
         {
             var arrayNomeCompacto = Path.GetFileNameWithoutExtension(nomeArquivo).Take(10).ToArray();
             var novoNomeArquivo = new string(arrayNomeCompacto).Replace(" ", "-");
-            novoNomeArquivo = $"{novoNomeArquivo}{DateTime.Now.Year}{DateTime.Now.Month}{DateTime.Now.Day}.{extensao}";
+            novoNomeArquivo = $"{novoNomeArquivo}{DateTime.Now.Year}{DateTime.Now.Month}{DateTime.Now.Day}{DateTime.Now.Hour}{DateTime.Now.Minute}.{extensao}";
             return novoNomeArquivo;
         }
     }
