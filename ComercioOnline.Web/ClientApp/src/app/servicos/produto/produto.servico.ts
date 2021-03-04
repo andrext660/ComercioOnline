@@ -41,11 +41,12 @@ export class ProdutoServico implements OnInit {
 
   }
 
-
+  //Deletar produto
   public deletar(produto: Produto): Observable<Produto[]> {
     return this.http.post<Produto[]>(this._baseUrl + "api/produto/deletar", JSON.stringify(produto), { headers: this.headers });
 
   }
+
 
 
   public obterTodosProdutos(): Observable<Produto[]> {
@@ -56,7 +57,7 @@ export class ProdutoServico implements OnInit {
     return this.http.get<Produto>(this._baseUrl + "api/produto/obter");
   }
 
-
+  //Enviar arquivo
   public enviarArquivo(arquivoSelecionado: File): Observable <string> {
 
     const formData: FormData = new FormData();

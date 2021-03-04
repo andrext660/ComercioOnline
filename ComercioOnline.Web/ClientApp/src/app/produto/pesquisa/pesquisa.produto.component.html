@@ -23,7 +23,7 @@
       <td style="width:50%">{{p.descricao}}</td>
       <td style="width:10%">{{p.preco}}</td>
       <td style="width:10%"><img src="../../../../../arquivos/{{p.nomeArquivo}}" style="width:80px;height:80px" /></td>
-      <td><button class="btn btn-success btn-sm">Editar</button></td>
+      <td><button class="btn btn-success btn-sm" (click)="editarProduto(p)">Editar</button></td>
       <td><button class="btn btn-danger btn-sm" (click)="deletarProduto(p)">Deletar</button></td>
     </tr>
     

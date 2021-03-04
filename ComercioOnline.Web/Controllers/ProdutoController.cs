@@ -58,7 +58,15 @@ namespace ComercioOnline.Web.Controllers
                     return BadRequest(produto.ObterMensagemValidacao());
                 }
 
-                _produtoRepositorio.Adicionar(produto);
+                if (produto.Id > 0)
+                {
+                    _produtoRepositorio.Atualizar(produto);
+                }
+                else
+                {
+                    _produtoRepositorio.Adicionar(produto);
+                }
+
                 return Created("api/produto", produto);
             }
 
