@@ -33,6 +33,8 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\arquivos\153455_yam.jpg" />
+    <Content Remove="wwwroot\arquivos\iphone_se_2021220.jpg" />
+    <Content Remove="wwwroot\arquivos\iphone_se_20212242348.jpg" />
   </ItemGroup>
 
   <ItemGroup>
