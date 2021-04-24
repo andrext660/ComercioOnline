@@ -20,7 +20,5 @@ export class LojaEfetivarComponent implements OnInit {
     this.produtos = this.carrinhoCompras.obterProdutos();
 
 
-
-
   }
 }
