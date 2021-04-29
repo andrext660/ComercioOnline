@@ -14,10 +14,12 @@ export class LojaEfetivarComponent implements OnInit {
 
   public carrinhoCompras: LojacarrinhoCompras;
   public produtos: Produto[];
+  public total: number;
 
   ngOnInit(): void {
     this.carrinhoCompras = new LojacarrinhoCompras();
     this.produtos = this.carrinhoCompras.obterProdutos();
+    this.atualizarTotal();
 
   }
 
@@ -32,6 +34,7 @@ export class LojaEfetivarComponent implements OnInit {
     }
     produto.preco = produto.precoOriginal * quantidade;
     this.carrinhoCompras.atualizar(this.produtos);
+    this.atualizarTotal();
 
   }
 
@@ -39,6 +42,11 @@ export class LojaEfetivarComponent implements OnInit {
 
     this.carrinhoCompras.removerProduto(produto);
     this.produtos = this.carrinhoCompras.obterProdutos();
+    this.atualizarTotal();
+  }
+
+  public atualizarTotal() {
+    this.total = this.produtos.reduce((acc, produto) => acc + produto.preco, 0);
   }
 
 
