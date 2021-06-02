@@ -1,11 +1,7 @@
 ﻿using ComercioOnline.Dominio.Entidades;
 using ComercioOnline.Dominio.Objeto_de_Valor;
 using ComercioOnline.Repositorio.Config;
-using JetBrains.Annotations;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ComercioOnline.Repositorio.Contexto
 {
