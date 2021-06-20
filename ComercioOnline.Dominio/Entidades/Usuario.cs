@@ -13,7 +13,7 @@ namespace ComercioOnline.Dominio.Entidades
         public string Senha { get; set; }
         public string Nome { get; set; }
         public string SobreNome { get; set; }
-        public bool EhAdministrado { get; set; }
+        public bool EhAdministrador { get; set; }
 
         //Usuario pode ter nenhum ou vários pedidos
         public virtual ICollection<Pedido> Pedidos { get; set; }
