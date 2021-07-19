@@ -49,5 +49,8 @@ export class LojaEfetivarComponent implements OnInit {
     this.total = this.produtos.reduce((acc, produto) => acc + produto.preco, 0);
   }
 
+  public efetivarCompra() {
+
+  }
 
 }

@@ -23,9 +23,9 @@ export class LojacarrinhoCompras {
 
   public obterProdutos(): Produto[] {
     var produtoLocalStorage = localStorage.getItem("produtoLocalStorage");
-    if (produtoLocalStorage) {
+    if (produtoLocalStorage)
       return JSON.parse(produtoLocalStorage);
-    }
+      return this.produtos;    
   }
 
 
