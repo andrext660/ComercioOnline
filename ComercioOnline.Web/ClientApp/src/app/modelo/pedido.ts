@@ -1,3 +1,5 @@
+import { itemPedido } from "./itemPedido";
+
 export class Pedido{
 
   public id: number;
@@ -11,4 +13,9 @@ export class Pedido{
   public numeroEndereco: string;
   public fomaPagamentoId: number;
 
+  public itensPedido: itemPedido[];
+
+  constructor() {
+    this.itensPedido=[];
+  }
 }
