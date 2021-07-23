@@ -12,7 +12,6 @@ export class Pedido{
   public enderecoCompleto: string;
   public numeroEndereco: string;
   public fomaPagamentoId: number;
-
   public itensPedido: itemPedido[];
 
   constructor() {

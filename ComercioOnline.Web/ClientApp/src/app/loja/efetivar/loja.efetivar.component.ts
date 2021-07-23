@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Pedido } from "../../modelo/pedido";
 import { Produto } from "../../modelo/produto";
 import { ProdutoServico } from "../../servicos/produto/produto.servico";
 import { LojacarrinhoCompras } from "../loja/carrinho-compras/loja.carrinho.compras";
@@ -50,7 +51,7 @@ export class LojaEfetivarComponent implements OnInit {
   }
 
   public efetivarCompra() {
-
+    let pedido = new Pedido();
   }
 
 }
