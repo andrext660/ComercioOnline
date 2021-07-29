@@ -11,8 +11,6 @@ import { Produto } from "../../modelo/produto";
 
 export class ProdutoServico implements OnInit {
 
-
-
   private _baseUrl: string;
   public produtos: Produto [];
 
@@ -24,7 +22,6 @@ export class ProdutoServico implements OnInit {
     this.produtos = [];
     }
 
-
   get headers(): HttpHeaders {
     return new HttpHeaders().set('content-type', 'application/json')
   }
@@ -33,7 +30,6 @@ export class ProdutoServico implements OnInit {
     return this.http.post<Produto>(this._baseUrl + "api/produto", JSON.stringify(produto),{ headers: this.headers });
 
   }
-
 
   public salvar(produto: Produto): Observable<Produto> {
 
@@ -46,8 +42,6 @@ export class ProdutoServico implements OnInit {
     return this.http.post<Produto[]>(this._baseUrl + "api/produto/deletar", JSON.stringify(produto), { headers: this.headers });
 
   }
-
-
 
   public obterTodosProdutos(): Observable<Produto[]> {
     return this.http.get<Produto[]>(this._baseUrl + "api/produto");
