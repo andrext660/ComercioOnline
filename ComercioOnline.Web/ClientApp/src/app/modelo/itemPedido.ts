@@ -1,4 +1,6 @@
-export class itemPedido {
+
+
+export class ItemPedido {
 
   public id: number;
   public produtoId: number;

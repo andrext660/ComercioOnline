@@ -1,4 +1,4 @@
-import { itemPedido } from "./itemPedido";
+import { ItemPedido } from "./itemPedido";
 
 export class Pedido{
 
@@ -12,9 +12,10 @@ export class Pedido{
   public enderecoCompleto: string;
   public numeroEndereco: string;
   public fomaPagamentoId: number;
-  public itensPedido: itemPedido[];
+  public itensPedido: ItemPedido[];
 
   constructor() {
+    this.dataPedido = new Date();
     this.itensPedido=[];
   }
 }

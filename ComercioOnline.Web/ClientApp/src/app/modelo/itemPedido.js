@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.itemPedido = void 0;
-var itemPedido = /** @class */ (function () {
-    function itemPedido() {
+exports.ItemPedido = void 0;
+var ItemPedido = /** @class */ (function () {
+    function ItemPedido() {
     }
-    return itemPedido;
+    return ItemPedido;
 }());
-exports.itemPedido = itemPedido;
+exports.ItemPedido = ItemPedido;
 //# sourceMappingURL=itemPedido.js.map
