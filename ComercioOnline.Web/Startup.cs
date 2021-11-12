@@ -20,22 +20,16 @@ namespace ComercioOnline.Web
 
         public Startup(IConfiguration configuration)
         {
-
             var builder = new ConfigurationBuilder();
             builder.AddJsonFile("config.json", optional:false, reloadOnChange:true);
-
             Configuration = builder.Build();
-
-
         }
 
-     
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
 
         {
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
@@ -45,11 +39,10 @@ namespace ComercioOnline.Web
                                     .UseMySql(connectionString,
                                     m => m.MigrationsAssembly("ComercioOnline.Repositorio")));
 
-
-
             services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
             services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
-           
+            services.AddScoped<IPedidoRepositorio, PedidoRepositorio>();
+
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

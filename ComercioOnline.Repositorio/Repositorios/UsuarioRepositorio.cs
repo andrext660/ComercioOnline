@@ -10,11 +10,9 @@ namespace ComercioOnline.Repositorio.Repositorios
 {
     public class UsuarioRepositorio : BaseRepositorio<Usuario>, IUsuarioRepositorio
 
-    {
-       
+    {      
         public UsuarioRepositorio(Context context) : base(context)
         {
-
 
         }
 
