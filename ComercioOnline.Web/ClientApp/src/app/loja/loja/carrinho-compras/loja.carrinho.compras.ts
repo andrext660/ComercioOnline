@@ -4,10 +4,9 @@ import { Produto } from "../../../modelo/produto";
 
 
 export class LojacarrinhoCompras {
+ 
 
   public produtos: Produto[] = [];
-
-
 
   public adicionar(produto: Produto) {
 
@@ -46,8 +45,12 @@ export class LojacarrinhoCompras {
   public itensNoCarrinho(): boolean {
     var itens = this.obterProdutos();
     return (itens.length > 0);
-
   }
+
+  public limparCarrinhocompras() {
+    localStorage.setItem("produtoLocaStorage", " ");
+  }
+
 
 }
 
